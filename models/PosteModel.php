@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Db;
+namespace App\Models;
 
 class PosteModel extends Model
 {
