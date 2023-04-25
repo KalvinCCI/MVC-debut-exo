@@ -17,11 +17,7 @@ class MainController extends Controller
         ]);
     }
 
-    #[Route('test','/test', ['GET'])]
-    public function test(): void
-    {
-        echo 'Test';
-    }
+    
 
 
 }

@@ -8,8 +8,8 @@ use App\Core\Route;
 class PosteController extends Controller
 {
     #[Route('poste.show', '/poste/details/([0-9]+)', ['GET'])]
-    public function showPoste(int $id)
+    public function showPoste(int $id): void
     {
-        echo 'Pste Detail';
+        echo 'Poste Detail';
     }
 }
