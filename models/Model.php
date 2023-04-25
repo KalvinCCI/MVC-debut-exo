@@ -46,7 +46,7 @@ class Model extends Db
         return $query->fetchAll();
     }
 
-    public function findBy(array $criteres): array
+    public function findBy(array $criteres): mixed
     {
         // SELECT * FROM poste WHERE titre = :titre AND id = :id
         $champs = [];
@@ -64,7 +64,7 @@ class Model extends Db
     }
 
     
-    public function find(int $id): array|bool
+    public function find(int $id): mixed
     {
         return $this->runQuery("SELECT * FROM $this->table WHERE id = ?", [$id])->fetch();
     }

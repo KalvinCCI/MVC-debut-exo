@@ -17,8 +17,6 @@ abstract class Controller
         // On décharge le buffer de sortie
         $contenu = ob_get_clean();
 
-        var_dump($contenu);
-
         include_once ROOT.'/views/base.php';
     }
 }
