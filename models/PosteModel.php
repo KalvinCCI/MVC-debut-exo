@@ -8,7 +8,7 @@ class PosteModel extends Model
     protected ?string $titre = null;
     protected ?string $description = null;
     protected ?\DateTime $createdAt = null;
-    protected ?int $actif = null;
+    protected ?bool $actif = null;
     
     public function __construct()
     {
@@ -114,9 +114,9 @@ class PosteModel extends Model
     /**
      * Get the value of actif
      *
-     * @return ?int
+     * @return ?bool
      */
-    public function getActif(): ?int
+    public function getActif(): ?bool
     {
         return $this->actif;
     }
@@ -124,11 +124,11 @@ class PosteModel extends Model
     /**
      * Set the value of actif
      *
-     * @param ?int $actif
+     * @param ?bool $actif
      *
      * @return self
      */
-    public function setActif(?int $actif): self
+    public function setActif(?bool $actif): self
     {
         $this->actif = $actif;
 
