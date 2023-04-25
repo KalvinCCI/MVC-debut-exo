@@ -17,4 +17,3 @@ $app = new Main();
 $app->start();
 
 ?>
-<style>:root{color-scheme: dark;}</style>

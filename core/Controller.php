@@ -9,6 +9,16 @@ abstract class Controller
 
         extract($data);
 
-        include_once ROOT."/views/$view.php";
+        // On démarre le buffer de sortie
+        ob_start();
+
+            include_once ROOT."/views/$view.php";
+
+        // On décharge le buffer de sortie
+        $contenu = ob_get_clean();
+
+        var_dump($contenu);
+
+        include_once ROOT.'/views/base.php';
     }
 }

@@ -1,4 +1,4 @@
-<h1>sdvfh fsf</h1>
+<h1>Page d'accueil</h1>
 
 <section class="postes">
     <div class="postes-list">
