@@ -27,6 +27,7 @@ class Form
                 return false;
             }
         }
+        
         return true;
     }
 
@@ -85,6 +86,7 @@ class Form
     {
         $this->formCode .= "<input type=\"$type\" name=\"$name\"";
         $this->formCode .= $attributs?$this->addAttributes($attributs).'>':'>';
+        
         return $this;
     }
 
@@ -93,6 +95,7 @@ class Form
         $this->formCode .= "<button";
         $this->formCode .= $attributs?$this->addAttributes($attributs):'';
         $this->formCode .= ">$text</button>";
+        
         return $this;
     }
 
