@@ -11,6 +11,8 @@ class Main
 
     public function start(): void
     {
+        session_start();
+
         $uri = $_SERVER['REQUEST_URI'];
 
         if ($uri != '/' && !empty($uri) && $uri[-1] === '/') {
@@ -22,10 +24,10 @@ class Main
             // On redirige le navigateur 
             header("Location: $uri");
             exit();
-
-
         }
+        
         $this->initRouter();
+
         $this->router->handleRequest($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
     }
 

@@ -8,6 +8,11 @@
                         <a href="/" class="nav-link">Accueil</a>
                     </li>
                 </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/login" class="btn btn-light">Se connecter</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

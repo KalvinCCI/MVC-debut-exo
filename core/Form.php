@@ -18,7 +18,7 @@ class Form
      * @param array $champs les champs obligatoire pour valider le formulaire
      * @return boolean
      */
-    public function validate(array $form, array $champs): bool
+    public static function validate(array $form, array $champs): bool
     {
         // On parcourt les champs
         foreach ($champs as $champ) {
@@ -52,7 +52,7 @@ class Form
 
     public function endForm(): self
     {
-        $this->formCode .= '</form>';
+        $this->formCode .= '</form>'.PHP_EOL;
 
         return $this;
     }
