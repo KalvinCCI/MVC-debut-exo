@@ -11,6 +11,7 @@
 </head>
 <body>
 <?php include_once 'layout/header.php' ?>
+<?php include_once 'layout/messages.php'?>
 
 <main>
 <?php echo (string)$contenu?>
