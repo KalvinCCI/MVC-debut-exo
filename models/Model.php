@@ -75,14 +75,14 @@ class Model extends Db
      * @param self $model
      * @return void
      */
-    public function create(self $model): PDOStatement|bool
+    public function create(): PDOStatement|bool
     {
         // INSERT INTO poste (titre, description, actif) VALUES (?,?,?)
         $champs = [];
         $marqueurSql = [];
         $valeurs = [];
 
-        foreach ($model as $key => $value) {
+        foreach ($this as $key => $value) {
             if ($key != 'table' && $key != 'db' &&  $value !== null) {
                 $champs[] = $key;
                 $marqueurSql[] = '?';
@@ -103,7 +103,7 @@ class Model extends Db
      * @param array $donnees
      * @return self
      */
-    public function hydrate(array $donnees): self
+    public function hydrate(mixed $donnees): self
     {
         foreach($donnees as $key => $value){
             // On récupère le nom du setter qui correspond à la clé (key)
@@ -126,12 +126,12 @@ class Model extends Db
      * @param self $model
      * @return PDOStatement|boolean
      */
-    public function update(int $id, self $model): PDOStatement|bool
+    public function update(int $id): PDOStatement|bool
     {
         $champs = [];
         $valeurs = [];
 
-        foreach ($model as $champ => $valeur) {
+        foreach ($this as $champ => $valeur) {
             if ($champ != 'table' && $champ != 'db' &&  $valeur !== null) {
                 $champs[] = "$champ = ?";
                 $valeurs[] = $valeur;
